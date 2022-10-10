@@ -21,6 +21,7 @@ body {
         margin: 0;
     }
     span {
+        font-size: 17px;
         margin-top: -16px;
         color: #2F7AF6;
         display: block;
@@ -32,6 +33,9 @@ body {
 input {
     font-size: 0.9rem;
     border-radius: 3px;
+    &:focus {
+        outline: none;
+    }
     &[type="text"] {
         border: 1px solid #ccc;
         max-width: 600px;
@@ -46,8 +50,8 @@ nav {
     gap: 20px;
     justify-content: flex-end;
     margin: 20px 20px;
+    font-size: 0.825rem;
     a {
-        font-size: 0.9rem;
         color: black;
         text-decoration: none;
         &:hover {
@@ -65,8 +69,11 @@ nav {
     margin: auto;
     input[type="text"] {
         padding: 12px 28px;
-        width: 80%;
-        border-radius: 16px;
+        width: 85%;
+        border-radius: 2rem;
+        &:hover {
+            box-shadow: #ddd 0 0 6px;
+        }
     }
 }
 
@@ -85,48 +92,42 @@ nav {
     }
 }
 
-h1 {
-    padding: 0 2rem;
-    font-size: 1.25rem;
-    color: #D93025;
-    font-weight: normal;
-}
-
-h2 {
-    font-size: 1rem;
-    font-weight: normal;
-}
-
 .advanced-search {
-    border-top: 1px solid #eee;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    > div {
-        display: flex;
+    font-size: 0.8rem;
+    h1 {
+        color: #D93025;
+        font-size: 1.25rem;
+        padding: 0 2rem 1rem 2rem;
+        border-bottom: 1px solid rgb(234, 234, 234);
+        font-weight: normal;
     }
-    label {
-        display: inline-block;
-        min-width: 11rem;
-        font-size: 0.825rem;
+    h2 {
+        font-size: 1rem;
+        font-weight: normal;
     }
-    input {
-        width: 100%;
-        padding: 6px 8px;
-        &[type="submit"] {
-            width: auto;
-            font-size: 0.7rem;
-            border-color: #226add;
-            background-color: #2F7AF6;
-            color: white;
-            font-weight: bold;
-            &:hover {
-                background-color: #226add;
-            }
+    form {
+        padding: 0 2rem;
+    }
+    &-grid {
+        max-width: 768px;
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        row-gap: 14px;
+    }
+    input[type="text"] {
+        padding: 5px 6px;
+    }
+    input[type="submit"] {
+        background-color: #2F7AF6;
+        color: white;
+        border: 1px solid #2F7AF6;
+        padding: 8px 16px;
+        font-weight: bold;
+        font-size: 0.7rem;
+        width: max-content;
+        justify-self: end;
+        &:hover {
+            box-shadow: $gray2 0 1px 1px;
         }
-    }
-    .submit-container {
-        justify-content: end;
     }
 }
