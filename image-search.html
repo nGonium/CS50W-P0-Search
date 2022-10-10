@@ -7,13 +7,16 @@
     </head>
     <body>
         <nav>
-            <a href="/image-search.html">Images</a>
+            <a href="/index.html">Home</a>
             <a href="/advanced-search.html">Advanced</a>
         </nav>
         <form class="search-bar" action="https://google.com/search">
             <div class="logo-hero-container">
                 <h1 class="logo-hero">Google</h1>
-            </div>            <input type="text" name="q" autocomplete="off" autofocus>
+                <span>images</span>
+            </div>
+            <input type="text" name="q" autocomplete="off" autofocus>
+            <input type="hidden" name="tbm" value="isch">
             <div class="search-bar-btns">
                 <input type="submit" value="Google Search">
                 <input type="submit" value="I'm feeling lucky">
